@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+# Dev ortamında CORS yapılandırması
+spring:
+  mvc:
+    cors:
+      allowed-origins: http://localhost:3000
+      allowed-methods: GET,POST,PUT,DELETE
+      allowed-headers: "*"
+      allow-credentials: true
+      exposed-headers: Content-Disposition, Content-Length
+      max-age: 3600 

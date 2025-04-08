@@ -1,0 +1,17 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+# Prod ortamında CORS yapılandırması
+spring:
+  mvc:
+    cors:
+      allowed-origins: https://codeyzersi.tail9fb8f4.ts.net
+      allowed-methods: GET,POST,PUT,DELETE
+      allowed-headers: "*"
+      allow-credentials: true
+      exposed-headers: Content-Disposition, Content-Length
+      max-age: 3600 
